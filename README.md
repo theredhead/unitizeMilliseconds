@@ -1,6 +1,6 @@
-# unitizemilliseconds
+# unitizeMilliseconds(ms: number): UnitizedMillisecondsResult
 
-- [unitizemilliseconds](#unitizemilliseconds)
+- [unitizeMilliseconds(ms: number): UnitizedMillisecondsResult](#unitizemillisecondsms-number-unitizedmillisecondsresult)
   - [Purpose](#purpose)
   - [Caveats](#caveats)
   - [Usage](#usage)

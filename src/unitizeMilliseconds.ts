@@ -10,20 +10,20 @@ const HOURS_IN_DAY = 24;
 const MINUTES_IN_HOUR = 60;
 const SECONDS_IN_MINUTE = 60;
 
-export interface UnitizedMiliseconds {
+export interface UnitizedMilliseconds {
   days: number;
   hours: number;
   minutes: number;
   seconds: number;
   milliseconds: number;
 }
-export interface UnitizedMilisecondsResult extends UnitizedMiliseconds {
-  individual: UnitizedMiliseconds;
+export interface UnitizedMillisecondsResult extends UnitizedMilliseconds {
+  individual: UnitizedMilliseconds;
 }
 
 export const unitizeMilliseconds = (
   numberOfMilliseconds: number
-): UnitizedMilisecondsResult => {
+): UnitizedMillisecondsResult => {
   const ms =
     numberOfMilliseconds < 0 ? -1 * numberOfMilliseconds : numberOfMilliseconds;
   const round = Math.floor;

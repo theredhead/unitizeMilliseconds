@@ -1,12 +1,12 @@
 /** @format */
 
 import {
-  UnitizedMilisecondsResult,
+  UnitizedMillisecondsResult,
   unitizeMilliseconds,
 } from "../src/unitizeMilliseconds";
 
 describe("unitizeMiliseconds' result structure", () => {
-  let result: UnitizedMilisecondsResult;
+  let result: UnitizedMillisecondsResult;
   beforeEach(() => {
     result = unitizeMilliseconds(123456789);
   });
