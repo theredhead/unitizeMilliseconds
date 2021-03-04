@@ -39,4 +39,11 @@ describe("unitizeMilliseconds' math should be correct", () => {
       });
     });
   });
+
+  it("can handle negative numbers", () => {
+    expect(() => {
+      const o = unitizeMiliseconds(-1861050);
+      expect(o.minutes).toEqual(31);
+    }).not.toThrow();
+  });
 });
