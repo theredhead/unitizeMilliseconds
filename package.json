@@ -1,6 +1,6 @@
 {
   "name": "@theredhead/unitizemilliseconds",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Parse a number of milliseconds into a structure containing seconds, minutes, hours, and days in a more useful manner.",
   "main": "dist/unitizeMilliseconds.js",
   "scripts": {
