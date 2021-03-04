@@ -2,13 +2,13 @@
 
 import {
   UnitizedMilisecondsResult,
-  unitizeMiliseconds,
+  unitizeMilliseconds,
 } from "../src/unitizeMilliseconds";
 
 describe("unitizeMiliseconds' result structure", () => {
   let result: UnitizedMilisecondsResult;
   beforeEach(() => {
-    result = unitizeMiliseconds(123456789);
+    result = unitizeMilliseconds(123456789);
   });
 
   const expectedKeys = ["milliseconds", "seconds", "minutes", "hours", "days"];
@@ -33,7 +33,7 @@ describe("unitizeMilliseconds' math should be correct", () => {
   tests.forEach((test) => {
     ix++;
     it(`behaves as expected with known values #${ix}`, () => {
-      const o = unitizeMiliseconds(test.in) as any;
+      const o = unitizeMilliseconds(test.in) as any;
       Object.keys(test.known).forEach((unit) => {
         expect((test.known as any)[unit]).toEqual(o[unit]);
       });
@@ -42,7 +42,7 @@ describe("unitizeMilliseconds' math should be correct", () => {
 
   it("can handle negative numbers", () => {
     expect(() => {
-      const o = unitizeMiliseconds(-1861050);
+      const o = unitizeMilliseconds(-1861050);
       expect(o.minutes).toEqual(31);
     }).not.toThrow();
   });

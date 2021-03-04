@@ -21,7 +21,7 @@ export interface UnitizedMilisecondsResult extends UnitizedMiliseconds {
   individual: UnitizedMiliseconds;
 }
 
-export const unitizeMiliseconds = (
+export const unitizeMilliseconds = (
   numberOfMilliseconds: number
 ): UnitizedMilisecondsResult => {
   const ms =
