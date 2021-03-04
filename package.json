@@ -1,0 +1,25 @@
+{
+  "name": "@theredhead/unitizemilliseconds",
+  "version": "1.0.0",
+  "description": "Parse a number of milliseconds into a structure containing seconds, minutes, hours, and days in a more useful manner.",
+  "main": "dist/unitizeMilliseconds.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "publish-patch": "npm run test && npm run build && npm version patch && npm publish --access public",
+    "test": "ts-node node_modules/jasmine/bin/jasmine --config=jasmine.json",
+    "coverage": "nyc -r lcov -e .ts -x \"tests/*.test.ts\" npm run test",
+    "coverage-cli": "nyc -r text -e .ts -x \"tests/*.test.ts\" npm run test"
+  },
+  "keywords": [
+    "milliseconds",
+    "parsing"
+  ],
+  "author": "kris@theredhead.nl",
+  "license": "WTFPL",
+  "devDependencies": {
+    "@types/jasmine": "^3.6.4",
+    "jasmine": "^3.6.4",
+    "nyc": "^15.1.0",
+    "typescript": "^4.2.2"
+  }
+}
