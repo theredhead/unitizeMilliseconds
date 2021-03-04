@@ -31,6 +31,7 @@ describe("unitizeMilliseconds' math should be correct", () => {
 
   let ix = 0;
   tests.forEach((test) => {
+    ix++;
     it(`behaves as expected with known values #${ix}`, () => {
       const o = unitizeMiliseconds(test.in) as any;
       Object.keys(test.known).forEach((unit) => {
