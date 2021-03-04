@@ -34,11 +34,11 @@ export const unitizeMilliseconds = (
     seconds: round(ms / MS_IN_SECOND) % SECONDS_IN_MINUTE,
     milliseconds: round(ms) % MS_IN_SECOND,
     individual: {
-      days: round(ms / MS_IN_DAY),
-      hours: round(ms / MS_IN_HOUR),
-      minutes: round(ms / MS_IN_MINUTE),
-      seconds: round(ms / MS_IN_SECOND),
-      milliseconds: round(ms),
+      days: ms / MS_IN_DAY,
+      hours: ms / MS_IN_HOUR,
+      minutes: ms / MS_IN_MINUTE,
+      seconds: ms / MS_IN_SECOND,
+      milliseconds: ms,
     },
   };
 };
